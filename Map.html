@@ -1,0 +1,75 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>HOTREST</title>
+<script type="applijewelleryion/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<link href="css/bootstrap1.css" rel='stylesheet' type='text/css' />
+<!-- Custom Theme files -->
+<link href="css/style1.css" rel='stylesheet' type='text/css' /> 
+<script src="js/jquery-1.11.1.min.js"></script>
+
+<script type="text/javascript" src="js/bootstrap.js"></script>
+</head>
+<body>
+<!-- banner -->
+  <div class="banner1">
+    <div class="header">
+      <div class="container">
+        <div class="logo">
+          <h1><a href="hotrest.html">HOTREST</a></h1>
+        </div>
+          <nav class="navbar navbar-default" role="navigation">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+            </div>
+            <!--/.navbar-header-->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <ul class="nav navbar-nav">
+                <li><a href="hotelpage.php">Reservation</a></li>
+                <li><a href="rooms.html">Rooms</a></li>
+                <li ><a href="roomcheck.php">Contact</a></li>
+                <li><a href="checkout.php">Checkout</a></li>
+                <li><a href="transport.php">Transport</a></li>
+                <li class="active"><a href="Map.html">Map</a></li>
+              </ul>
+            </div>
+            <!--/.navbar-collapse-->
+          </nav>
+          <div class="clearfix"> </div>
+
+        <!-- search-scripts -->
+          <script src="js/classie.js"></script>
+          <script src="js/uisearch.js"></script>
+          <script>
+            new UISearch( document.getElementById( 'sb-search' ) );
+          </script>
+        <!-- //search-scripts -->
+
+      </div>
+    </div>
+  </div>
+<div id="map" style="width:1500px;height:400px"></div>
+
+<script>
+function myMap() {
+  var mapCanvas = document.getElementById("map");
+  var myCenter = new google.maps.LatLng(24.8568991,67.2646838); 
+  var mapOptions = {center: myCenter, zoom: 15};
+  var map = new google.maps.Map(mapCanvas,mapOptions);
+  var marker = new google.maps.Marker({
+    position: myCenter,
+    animation: google.maps.Animation.BOUNCE
+  });
+  marker.setMap(map);
+}
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBup8bKGgqC916vHpayZs33rGmbfKZuXBw&callback=myMap"></script>
+
+</body>
+</html>
